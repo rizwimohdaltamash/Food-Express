@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Food Delivery Theme */
+@layer utilities {
+  .food-gradient {
+    @apply bg-gradient-to-r from-food-orange via-food-red to-food-orange;
+  }
+  
+  .food-gradient-vertical {
+    @apply bg-gradient-to-b from-food-orange via-food-yellow to-food-light;
+  }
+  
+  .food-card-hover {
+    @apply transition-all duration-300 hover:shadow-2xl hover:-translate-y-2;
+  }
+  
+  .food-btn {
+    @apply bg-food-orange hover:bg-food-red text-white font-semibold px-6 py-3 rounded-full transition-all duration-300 hover:scale-105 shadow-lg;
+  }
+}
+
+/* Custom scrollbar for food theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFF8F0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FF6B35;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #E63946;
+}
+
+/* Dropdown animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.2s ease-out;
+}
